@@ -1,0 +1,86 @@
+@use "./partials/palette";
+@use "./modules/baseModule.scss";
+
+body {
+    background-color: palette.$primary;
+}
+.page__border {
+    border: solid 5px palette.$primary;
+    background-color: palette.$primaryLight;
+    box-shadow: 0px 0px 10px 5px palette.$secondary;
+}
+.page {
+    margin: 0px 15% 300px;
+
+    &__sidebar {
+        display: flex;
+        top: 30vh;
+        position: sticky;
+        color: white;
+    }
+    &__profile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+
+        &--text {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            margin-top: 50px;
+        }
+    }
+    &__profileImage {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+    }
+    &__title {
+        display: flex;
+        justify-content: center;
+    }
+    &__overview {
+        margin-top: 550px;
+        &--contents {
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+        }
+    }
+    &__skills {
+        @include baseModule.Grid($xSize: 30, $ySize: 30);
+        // have the gallery and grid stuff here
+    }
+}
+.page__sidebar > ul {
+    list-style-type: none;
+}
+.page__sidebar > ul > li {
+    padding: 10px;
+}
+.page__sidebar > ul > li > img {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    filter: brightness(0) invert(1);
+
+    border: solid 3px (36, 36, 36);
+}
+.page__sidebar > ul > li > img:hover {
+    filter: brightness(1) invert(0);
+    background-color: palette.$secondary;
+    box-shadow: 0px 0px 10px 2px palette.$secondary;
+    border-radius: 20px;
+}
+
+p {
+    font-size: 20px;
+    color: palette.$secondary;
+}
+
+h1 {
+    margin-bottom: 50px;
+    margin-top: 100px;
+    color: palette.$tertiary;
+}
