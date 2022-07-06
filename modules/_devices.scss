@@ -1,0 +1,9 @@
+$small: 576px;
+$medium: 768px;
+@mixin phone {
+    @media only screen and (min-width: $small) and(max-width: $medium) {
+        @content;
+    }
+}
+
+// just in case change header, or something with this, instead of having the things at the top, you can instead have a 3 line icon etc

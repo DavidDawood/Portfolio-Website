@@ -1,19 +1,18 @@
 @use "./partials/palette";
 @use "./modules/baseModule.scss";
 
+header {
+    color: white;
+}
 body {
     background-color: palette.$primary;
-}
-.page__border {
-    border: solid 5px palette.$primary;
-    background-color: palette.$primaryLight;
-    box-shadow: 0px 0px 10px 5px palette.$secondary;
 }
 .page {
     margin: 0px 15% 300px;
 
     &__sidebar {
         display: flex;
+        width: 10vw;
         top: 30vh;
         position: sticky;
         color: white;
@@ -41,37 +40,46 @@ body {
         justify-content: center;
     }
     &__overview {
+        @include baseModule.content-container($width: 80vh, $height: 500px);
         margin-top: 550px;
-        &--contents {
-            border-radius: 10px;
-            display: flex;
-            justify-content: center;
-        }
     }
     &__skills {
-        @include baseModule.Grid($xSize: 30, $ySize: 30);
-        // have the gallery and grid stuff here
-    }
-}
-.page__sidebar > ul {
-    list-style-type: none;
-}
-.page__sidebar > ul > li {
-    padding: 10px;
-}
-.page__sidebar > ul > li > img {
-    width: 50px;
-    height: 50px;
-    padding: 5px;
-    filter: brightness(0) invert(1);
+        @include baseModule.content-container($width: 80vh, $height: 500px);
 
-    border: solid 3px (36, 36, 36);
-}
-.page__sidebar > ul > li > img:hover {
-    filter: brightness(1) invert(0);
-    background-color: palette.$secondary;
-    box-shadow: 0px 0px 10px 2px palette.$secondary;
-    border-radius: 20px;
+        &--contents {
+            padding: 50px;
+            @include baseModule.Grid($xSize: 3, $ySize: 4);
+
+            &-item {
+                --fa-animation-duration: 0s;
+                @extend %centerGrid;
+                @extend %invertPicStable;
+                &:hover {
+                    --fa-animation-duration: 2s;
+                    @extend %invertPicHover;
+                }
+            }
+        }
+    }
+    &__projects {
+        @include baseModule.content-container($width: 80vh, $height: 500px);
+    }
+    &__contact {
+        @include baseModule.content-container($width: 50vh, $height: 300px);
+    }
+    &__sidebar > ul {
+        list-style-type: none;
+        & > li {
+            padding: 10px;
+            & > img {
+                @extend %sideBarPic;
+                @extend %invertPicStable;
+                &:hover {
+                    @extend %invertPicHover;
+                }
+            }
+        }
+    }
 }
 
 p {
@@ -80,7 +88,26 @@ p {
 }
 
 h1 {
+    color: palette.$tertiary;
+    font-size: 50px;
+    font-weight: bold;
     margin-bottom: 50px;
     margin-top: 100px;
-    color: palette.$tertiary;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: overline;
+}
+h2 {
+    @extend h1;
+    font-size: 40px;
+}
+form {
+    margin: auto;
+}
+.form-style {
+    color: palette.$secondary;
+    font-size: 20px;
+
+    & > span {
+        color: red;
+    }
 }

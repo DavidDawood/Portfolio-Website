@@ -1,0 +1,61 @@
+@use "../partials/palette";
+%center {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+%centerGrid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin Grid($xSize: 5, $ySize: 5) {
+    display: grid;
+    grid-template-columns: repeat($ySize, 1fr);
+    grid-template-rows: repeat($xSize, 1fr);
+
+    grid-gap: 5px 5px;
+    flex-wrap: wrap;
+    justify-items: center;
+    align-items: center;
+}
+
+%border {
+    border: solid 2px palette.$primary;
+    background-color: palette.$primaryLight;
+    box-shadow: 0px 0px 10px 2px palette.$secondary;
+}
+%sideBarPic {
+    width: 50px;
+    height: 50px;
+}
+%invertPicStable {
+    padding: 5px;
+    filter: brightness(0) invert(1);
+}
+
+%invertPicHover {
+    filter: brightness(1) invert(0);
+    background-color: palette.$secondary;
+    box-shadow: 0px 0px 10px 2px palette.$secondary;
+    border-radius: 20px;
+}
+@mixin content-container($width, $height) {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &--contents {
+        @extend %border;
+        border-radius: 10px;
+        padding: 10px;
+
+        width: $width;
+        height: $height;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+}

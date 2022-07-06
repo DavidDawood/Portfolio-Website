@@ -1,9 +1,0 @@
-@mixin center {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-}
-
-@mixin Grid($xSize: 5, $ySize: 5) {
-    // figure out grids here to prepare for the folders
-}

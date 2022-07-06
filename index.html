@@ -7,8 +7,17 @@
         <title>Overview</title>
         <link rel="stylesheet" href="index.css" />
         <script href="index.js"></script>
+        <script
+            src="https://kit.fontawesome.com/5ceb9f4a89.js"
+            crossorigin="anonymous"
+        ></script>
     </head>
     <body>
+        <header>
+            Have a bunch of tabs to quicky select differnt parts on the page on
+            the top right that will track the scroll to stay on the top right of
+            the page
+        </header>
         <sidebar class="page__sidebar">
             <ul>
                 <li><img src="images/GitHubCat.png" /></li>
@@ -29,7 +38,7 @@
 
             <section class="page__overview">
                 <h1 class="page__title">Overview</h1>
-                <div class="page__overview--contents page__border">
+                <div class="page__overview--contents">
                     <p>
                         I am a 20 year old junior developer looking to improve
                         my skills with the help of Nology
@@ -39,22 +48,85 @@
 
             <section class="page__skills">
                 <h1 class="page__title">Skills</h1>
-                <div class="page__overview--contents page__border">
-                    <p>Several images of skills logos here like JS etc</p>
+                <div class="page__skills--contents">
+                    <i
+                        class="page__skills--contents-item fa-brands fa-html5 fa-8x fa-beat"
+                    ></i>
+                    <i
+                        class="page__skills--contents-item fa-brands fa-node-js fa-8x fa-beat"
+                    ></i>
+                    <i
+                        class="page__skills--contents-item fa-brands fa-sass fa-8x fa-beat"
+                    ></i>
+                    <i
+                        class="page__skills--contents-item fa-brands fa-css3-alt fa-8x fa-beat"
+                    ></i>
                 </div>
             </section>
 
             <section class="page__projects">
                 <h1 class="page__title">Projects</h1>
-                <div class="page__overview--contents page__border">
+                <div class="page__projects--contents">
                     <p>list a collection of repos with an image button here</p>
                 </div>
             </section>
 
             <section class="page__contact">
-                <h1 class="page__title">Contact Me</h1>
-                <div class="page__overview--contents page__border">
-                    <p>Have a button which will reveal a form here</p>
+                <h2 class="page__title">Contact Me</h2>
+                <div class="page__contact--contents">
+                    <form
+                        action="https://formspree.io/f/xqknongj"
+                        method="POST"
+                    >
+                        <div class="form-style">
+                            <label for="fullName">Full Name: </label>
+                            <span>*</span>
+                            <input
+                                name="Full Name"
+                                type="text"
+                                id="fullName"
+                                placeholder="Full Name"
+                                required
+                            />
+                        </div>
+                        <div class="form-style">
+                            <label for="Email">Email Address: </label>
+                            <span>*</span>
+                            <input
+                                name="Emaill Address"
+                                type="text"
+                                id="Email"
+                                placeholder="email@mail.com"
+                                required
+                            />
+                        </div>
+                        <div class="form-style">
+                            <label for="phoneNumber">Contact Number: </label>
+                            <span>*</span>
+                            <input
+                                name="Contact Number"
+                                type="tel"
+                                id="phoneNumber"
+                                placeholder="## #### ####"
+                                pattern="[0-9]{2} [0-9]{3} [0-9]{3}"
+                                required
+                            />
+                        </div>
+                        <div class="form-style">
+                            <label for="reason">Reason: </label>
+                            <span>*</span>
+                            <br />
+                            <textarea
+                                name="reason"
+                                id=""
+                                cols="30"
+                                rows="10"
+                                required
+                            ></textarea>
+                        </div>
+
+                        <input type="submit" />
+                    </form>
                 </div>
             </section>
         </section>
