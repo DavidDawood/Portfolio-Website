@@ -2,7 +2,21 @@
 @use "./modules/baseModule.scss";
 
 header {
-    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    position: sticky;
+    top: 10px;
+    & > a {
+        color: white;
+        padding: 10px;
+        padding-right: 20px;
+        text-decoration: overline;
+
+        &:hover {
+            color: palette.$secondary;
+        }
+    }
 }
 body {
     background-color: palette.$primary;

@@ -28,7 +28,20 @@
 }
 
 header {
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+  position: sticky;
+  top: 10px;
+}
+header > a {
   color: white;
+  padding: 10px;
+  padding-right: 20px;
+  text-decoration: overline;
+}
+header > a:hover {
+  color: gold;
 }
 
 body {

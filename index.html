@@ -14,9 +14,10 @@
     </head>
     <body>
         <header>
-            Have a bunch of tabs to quicky select differnt parts on the page on
-            the top right that will track the scroll to stay on the top right of
-            the page
+            <a href="#overviewTab">Overview</a>
+            <a href="#skillsTab">Skills</a>
+            <a href="#projectsTab">Projects</a>
+            <a href="#contactTab">Contact Me</a>
         </header>
         <sidebar class="page__sidebar">
             <ul>
@@ -36,7 +37,7 @@
                 <h1 class="page__profile--text">David Dawood</h1>
             </div>
 
-            <section class="page__overview">
+            <section id="overviewTab" class="page__overview">
                 <h1 class="page__title">Overview</h1>
                 <div class="page__overview--contents">
                     <p>
@@ -46,8 +47,8 @@
                 </div>
             </section>
 
-            <section class="page__skills">
-                <h1 class="page__title">Skills</h1>
+            <section id="skillsTab" class="page__skills">
+                <h1>Skills</h1>
                 <div class="page__skills--contents">
                     <i
                         class="page__skills--contents-item fa-brands fa-html5 fa-8x fa-beat"
@@ -64,15 +65,15 @@
                 </div>
             </section>
 
-            <section class="page__projects">
+            <section id="projectsTab" class="page__projects">
                 <h1 class="page__title">Projects</h1>
                 <div class="page__projects--contents">
                     <p>list a collection of repos with an image button here</p>
                 </div>
             </section>
 
-            <section class="page__contact">
-                <h2 class="page__title">Contact Me</h2>
+            <section id="contactTab" class="page__contact">
+                <h2>Contact Me</h2>
                 <div class="page__contact--contents">
                     <form
                         action="https://formspree.io/f/xqknongj"
@@ -107,8 +108,8 @@
                                 name="Contact Number"
                                 type="tel"
                                 id="phoneNumber"
-                                placeholder="## #### ####"
-                                pattern="[0-9]{2} [0-9]{3} [0-9]{3}"
+                                placeholder="#### ### ###"
+                                pattern="[0-9]{4} [0-9]{3} [0-9]{3}"
                                 required
                             />
                         </div>
