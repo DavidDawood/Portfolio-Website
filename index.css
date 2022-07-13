@@ -1,10 +1,16 @@
+.page__profileImage, .project, .project__description {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
 .page__skills--contents-item {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.page__overview--contents, .page__skills--contents, .page__projects--contents, .page__contact--contents {
+.page__profileImage, .page__overview--contents, .page__skills--contents, .page__contact--contents, .project__description, .project__preview {
   border: solid 2px rgb(36, 36, 36);
   background-color: rgb(61, 61, 61);
   box-shadow: 0px 0px 10px 2px gold;
@@ -66,7 +72,7 @@ body {
 }
 .page__profile--text {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-content: center;
   margin-top: 50px;
 }
@@ -135,7 +141,7 @@ body {
 .page__projects--contents {
   border-radius: 10px;
   padding: 10px;
-  width: 80vh;
+  width: 60vw;
   height: 500px;
   display: flex;
   justify-content: center;
@@ -162,6 +168,43 @@ body {
 .page__sidebar > ul > li {
   padding: 10px;
 }
+.project__description {
+  width: 600px;
+  height: 200px;
+  border-radius: 20px;
+  top: 75px;
+  right: 30%;
+  position: relative;
+  flex-direction: column;
+}
+.project__description > p {
+  margin: 20px;
+  margin-right: 15%;
+}
+.project__preview {
+  width: 350px;
+  height: 350px;
+  left: 60%;
+  border-radius: 20px;
+  z-index: 1;
+  position: relative;
+}
+.project__preview > p {
+  margin: 30px;
+  color: gold;
+}
+
+h3 {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 5px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: underline;
+}
+
 p {
   font-size: 20px;
   color: gold;

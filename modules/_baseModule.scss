@@ -26,6 +26,11 @@
     background-color: palette.$primaryLight;
     box-shadow: 0px 0px 10px 2px palette.$secondary;
 }
+%borderNoGlow {
+    border: solid 2px palette.$secondary;
+    background-color: palette.$primaryLight;
+    border-radius: 30px;
+}
 %sideBarPic {
     width: 50px;
     height: 50px;
@@ -49,6 +54,23 @@
 
     &--contents {
         @extend %border;
+        border-radius: 10px;
+        padding: 10px;
+
+        width: $width;
+        height: $height;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+}
+@mixin content-containerNoBorder($width, $height) {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &--contents {
         border-radius: 10px;
         padding: 10px;
 
