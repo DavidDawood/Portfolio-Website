@@ -45,9 +45,11 @@ header > a {
   padding: 10px;
   padding-right: 20px;
   text-decoration: overline;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 header > a:hover {
   color: gold;
+  cursor: pointer;
 }
 
 body {
@@ -131,6 +133,7 @@ body {
 }
 .page__skills--contents-item:hover {
   --fa-animation-duration: 2s;
+  cursor: pointer;
 }
 .page__projects {
   margin-top: 50px;
@@ -168,6 +171,10 @@ body {
 .page__sidebar > ul > li {
   padding: 10px;
 }
+.page__sidebar > ul > li > img:hover {
+  cursor: pointer;
+}
+
 .project__description {
   width: 600px;
   height: 200px;

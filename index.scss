@@ -12,9 +12,10 @@ header {
         padding: 10px;
         padding-right: 20px;
         text-decoration: overline;
-
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         &:hover {
             color: palette.$secondary;
+            cursor: pointer;
         }
     }
 }
@@ -72,6 +73,7 @@ body {
                 @extend %invertPicStable;
                 &:hover {
                     --fa-animation-duration: 2s;
+                    cursor: pointer;
                     @extend %invertPicHover;
                 }
             }
@@ -95,6 +97,7 @@ body {
                 @extend %invertPicStable;
                 &:hover {
                     @extend %invertPicHover;
+                    cursor: pointer;
                 }
             }
         }
