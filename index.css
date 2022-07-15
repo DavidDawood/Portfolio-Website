@@ -16,17 +16,17 @@
   box-shadow: 0px 0px 10px 2px gold;
 }
 
-.page__sidebar > ul > li > img {
+.page__sidebar > ul > li, .page__sidebar > ul > li > a > img {
   width: 50px;
   height: 50px;
 }
 
-.page__skills--contents-item, .page__sidebar > ul > li > img {
+.page__skills--contents-item, .page__sidebar > ul > li > a > img {
   padding: 5px;
   filter: brightness(0) invert(1);
 }
 
-.page__skills--contents-item:hover, .page__sidebar > ul > li > img:hover {
+.page__skills--contents-item:hover, .page__sidebar > ul > li > a > img:hover {
   filter: brightness(1) invert(0);
   background-color: gold;
   box-shadow: 0px 0px 10px 2px gold;
@@ -128,6 +128,18 @@ body {
   justify-items: center;
   align-items: center;
 }
+.page__skills--contents > a {
+  text-decoration: none;
+}
+.page__skills--contents > a:active {
+  color: black;
+}
+.page__skills--contents > a:hover {
+  color: black;
+}
+.page__skills--contents > a:visited {
+  color: black;
+}
 .page__skills--contents-item {
   --fa-animation-duration: 0s;
 }
@@ -171,7 +183,7 @@ body {
 .page__sidebar > ul > li {
   padding: 10px;
 }
-.page__sidebar > ul > li > img:hover {
+.page__sidebar > ul > li > a > img:hover {
   cursor: pointer;
 }
 

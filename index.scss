@@ -67,6 +67,19 @@ body {
             padding: 50px;
             @include baseModule.Grid($xSize: 3, $ySize: 4);
 
+            & > a {
+                text-decoration: none;
+                &:active {
+                    color: black;
+                }
+                &:hover {
+                    color: black;
+                }
+                &:visited {
+                    color: black;
+                }
+            }
+
             &-item {
                 --fa-animation-duration: 0s;
                 @extend %centerGrid;
@@ -92,7 +105,8 @@ body {
         list-style-type: none;
         & > li {
             padding: 10px;
-            & > img {
+            @extend %sideBarPic;
+            & > a > img {
                 @extend %sideBarPic;
                 @extend %invertPicStable;
                 &:hover {
