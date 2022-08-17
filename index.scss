@@ -153,9 +153,10 @@ body {
         @extend %border;
         z-index: 1;
         position: relative;
-        & > p {
-            margin: 30px;
-            color: palette.$secondary;
+
+        & > img {
+            width: 100px;
+            height: 100px;
         }
     }
 }
