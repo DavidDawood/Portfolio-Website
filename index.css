@@ -107,7 +107,7 @@ body {
   border-radius: 10px;
   padding: 10px;
   width: 80vh;
-  height: 500px;
+  height: 200px;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -166,10 +166,13 @@ body {
   border-radius: 10px;
   padding: 10px;
   width: 60vw;
-  height: 500px;
+  height: auto;
   display: flex;
   justify-content: center;
   align-content: center;
+}
+.page__projects--contents > ul {
+  list-style: none;
 }
 .page__contact {
   margin-top: 50px;
@@ -196,12 +199,15 @@ body {
   cursor: pointer;
 }
 
+.project {
+  margin: 50px;
+}
 .project__description {
   width: 600px;
   height: 200px;
   border-radius: 20px;
   top: 75px;
-  right: 30%;
+  right: 35%;
   position: relative;
   flex-direction: column;
 }
@@ -217,9 +223,9 @@ body {
   z-index: 1;
   position: relative;
 }
-.project__preview > p {
-  margin: 30px;
-  color: gold;
+.project__preview > img {
+  width: 100px;
+  height: 100px;
 }
 
 h3 {

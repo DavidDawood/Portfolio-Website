@@ -67,7 +67,7 @@ body {
         justify-content: center;
     }
     &__overview {
-        @include baseModule.content-container($width: 80vh, $height: 500px);
+        @include baseModule.content-container($width: 80vh, $height: 200px);
         margin-top: 550px;
     }
     &__skills {
@@ -105,8 +105,12 @@ body {
     &__projects {
         @include baseModule.content-containerNoBorder(
             $width: 60vw,
-            $height: 500px
+            $height: auto
         );
+
+        &--contents > ul {
+            list-style: none;
+        }
     }
     &__contact {
         @include baseModule.content-container($width: 50vh, $height: 300px);
@@ -128,6 +132,7 @@ body {
     }
 }
 .project {
+    margin: 50px;
     @extend %center;
     &__description {
         width: 600px;
@@ -135,7 +140,7 @@ body {
         @extend %border;
         border-radius: 20px;
         top: 75px;
-        right: 30%;
+        right: 35%;
         position: relative;
         @extend %center;
         flex-direction: column;
